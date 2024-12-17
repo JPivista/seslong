@@ -2,20 +2,115 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* Define the Gibson font with appropriate weights and styles */
+@font-face {
+  font-family: "Gibson";
+  font-weight: 300; /* Light */
+  font-style: normal;
+  src: url("/fonts/fonnts.com-Gibson_Light.otf") format("opentype");
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+@font-face {
+  font-family: "Gibson";
+  font-weight: 300; /* Light Italic */
+  font-style: italic;
+  src: url("/fonts/fonnts.com-Gibson_Light_Italic.otf") format("opentype");
 }
 
+@font-face {
+  font-family: "Gibson";
+  font-weight: 400; /* Regular */
+  font-style: normal;
+  src: url("/fonts/fonnts.com-Gibson_Regular.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Gibson";
+  font-weight: 400; /* Italic */
+  font-style: italic;
+  src: url("/fonts/fonnts.com-Gibson_Italic.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Gibson";
+  font-weight: 500; /* Medium */
+  font-style: normal;
+  src: url("/fonts/fonnts.com-Gibson_Medium.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Gibson";
+  font-weight: 500; /* Medium Italic */
+  font-style: italic;
+  src: url("/fonts/fonnts.com-Gibson_Medium_Italic.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Gibson";
+  font-weight: 600; /* Semi-Bold */
+  font-style: normal;
+  src: url("/fonts/fonnts.com-Gibson_SemiBold_Italic.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Gibson";
+  font-weight: 600; /* Semi-Bold Italic */
+  font-style: italic;
+  src: url("/fonts/fonnts.com-Gibson_SemiBold.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Gibson";
+  font-weight: 700; /* Bold */
+  font-style: normal;
+  src: url("/fonts/fonnts.com-Gibson_Bold.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Gibson";
+  font-weight: 700; /* Bold Italic */
+  font-style: italic;
+  src: url("/fonts/fonnts.com-Gibson_Bold_Italic.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Gibson";
+  font-weight: 800; /* Heavy */
+  font-style: normal;
+  src: url("/fonts/fonnts.com-Gibson_Heavy.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Gibson";
+  font-weight: 800; /* Heavy Italic */
+  font-style: italic;
+  src: url("/fonts/fonnts.com-Gibson_Heavy_Italic.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Gibson";
+  font-weight: 100; /* Thin */
+  font-style: normal;
+  src: url("/fonts/fonnts.com-Gibson_Thin.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Gibson";
+  font-weight: 100; /* Thin Italic */
+  font-style: italic;
+  src: url("/fonts/fonnts.com-Gibson_Thin_Italic.otf") format("opentype");
+}
+
+/* Apply the Gibson font globally */
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  @apply font-gibson;
+}
+
+.post-content {
+  max-height: 2 * 0.3em !important;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
 }
